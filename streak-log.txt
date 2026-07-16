@@ -1,0 +1,1 @@
+Streak log - each line is a day the streak keeper committed for you.
