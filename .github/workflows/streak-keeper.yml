@@ -41,8 +41,8 @@ jobs:
           # Real change: append today's date to the streak log
           echo "$(date '+%Y-%m-%d %H:%M:%S %Z') - streak kept" >> streak-log.txt
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "${{ secrets.GIT_USER_NAME }}"
+          git config user.email "${{ secrets.GIT_USER_EMAIL }}"
 
           git add streak-log.txt
           git commit -m "chore: keep streak alive ($TODAY)"
